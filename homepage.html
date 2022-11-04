@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Homepage</title>
+        <meta name="description" content="First page with introduction to other pages content">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Author" content="Daniele Pagano">
+        <meta name="Author" content="Oliver Terzo">
+        <meta name="Author" content="Matteo Fasano">
+        <!-- Flaticon -->
+        <link rel="shortcut icon" href="img/logo.svg" />
+        <!-- External CSS -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/homepage.css">
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Khula" rel="stylesheet">
+        <!-- JQUERY -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    </head>
+    <body>
+    <!-- page content -->
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="page-container">
+            <!-- Navigation menu -->
+            <nav class="navigation">
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <a href="homepage.html"><img src="img/logo.svg"></a>
+                    <a href="homepage.html">MOD-Space</a><!-- link to the homepage.html page -->
+                </div>
+                <!-- Links -->
+                <ul class="nav-menu">
+                    <li><a href="about.html">About-us</a></li><!-- link to about.html page -->
+                    <li><a href="gallery.html">Gallery</a></li><!-- link to galley.html page -->
+                    <li><a href="join-us.html">Join-us</a></li><!-- link to join-us.html page -->
+                    <li><a href="astronauts.html">Astronauts</a></li><!-- link to astronauts.html page -->
+                    <li><a href="missions.html">Mission</a></li><!-- link to missions.html page -->
+                </ul>
+                <!-- Icon -->
+                <div class="nav-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </div>
+                <div class="nav-overlay"></div>
+            </nav>
+            <!-- 
+                First part
+                Background with parallax effects
+            -->
+            <div class="over">
+                <div class="over-content">
+                    <h1 class="title main-title">MOD-SPACE</h1>
+                    <a class="more" href="#introduction">MORE</a>
+                </div>
+            </div>
+            <!-- Introduction part -->
+            <div class="section" id="introduction">
+                <div class="text">
+                    <p>This is <a class="span-colored" href="#about-us">MOD-Space</a>. Here you can find past, present and future <a class="span-colored" href="#missions">Missions</a>. <a class="span-colored" href="#astronauts">Astronauts</a> who work with us and find out more <a class="span-colored" href="#about-us">about us</a>. You can also send us an application to become <a class="span-colored" href="#join-us">one of ours</a>.</p>
+                    <a href="#new-posts"><div class="arrow"></div></a>
+                </div>
+            </div><!-- #introduction -->
+            <!-- Astronaut image -->
+            <div class="image">
+                <img src="img/atronaut.png" alt="happy astronaut" id="astronaut">
+            </div>
+            <!-- News posts part -->
+            <div id="new-posts">
+                <!-- Post 1 -->
+                <a href="posts/grow-space.html">
+                    <div class="post" id="post1">
+                        <img src="img/space-station.jpg" alt="space station">
+                        <div class="post-content">
+                            <span>Grow plants</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Post 2 -->
+                <a href="posts/challenger-tragedy.html">
+                    <div class="post" id="post2">
+                        <img src="img/shuttle.jpg" alt="shuttle">
+                        <div class="post-content">
+                            <span>Challenger tragedy</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Post 3 -->
+                <a href="posts/curiosity-selfie.html">
+                    <div class="post" id="post3">
+                        <img src="img/curiosity.jpeg" alt="selfie of curiosity">
+                        <div class="post-content">
+                            <span>Curiosity selfie</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Post 4 -->
+                <a href="posts/mars.html">
+                    <div class="post" id="post4">
+                        <img src="img/mars.jpg" alt="mars">
+                        <div class="post-content">
+                            <span>Mars</span>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- #news-posts -->
+            <!-- Missions part -->
+            <div class="section" id="missions">
+                <div class="section-image"  id="mission-image">
+                    <img src="img/mission-past/past6.jpg" alt="space robot">
+                </div>
+                <div class="text">
+                    <h1>Mission</h1>
+                    <p><a class="span-colored" href="missions.html#6">Mars Global Surveyor (MGS)</a> was an American robotic space probe developed by NASA's Jet Propulsion Laboratory and launched November 1996. MGS was a global mapping mission that examined the entire planet, from the ionosphere down through the atmosphere to the surface. As part of the larger Mars Exploration Program, Mars Global Surveyor performed atmospheric monitoring for sister orbiters during aerobraking, and helped Mars rovers and lander missions by identifying potential landing sites and relaying surface telemetry.</p>
+                    <a class="small" href="missions.html">Other missions</a>
+                </div>
+            </div><!-- #missions -->
+            <!-- Arrow -->
+            <div class="arrow-back">
+                <a href="#astronauts"><div class="arrow"></div></a>
+            </div>
+            <!-- Parallax effects -->
+            <div class="parallax"></div>
+            <!-- Astronauts part -->
+            <div class="section" id="astronauts">
+                <div class="text">
+                    <h1>Astronaut</h1>
+                    <p><a class="span-colored" href="astronauts.html#Samanta-Cristoforetti">Captain Samantha Cristoforetti</a>, born in Milan, Italy, on 26 April 1977 Samantha Cristoforetti is an avid reader with a passion for science and technology, and an equal interest in humanities. She enjoys learning foreign languages and her current challenge is Chinese. Occasionally she finds the time to hike, scuba dive or practice yoga.</p>
+                    <a class="small" href="astronauts.html">Other austronauts</a>
+                </div>
+                <div class="section-image" id="astronaut-image">
+                    <img src="img/samantha-cristoforetti.jpg" alt="samantha cristoforetti">
+                </div>
+            </div><!-- #astronauts -->
+            <!-- Arrow -->
+            <div class="arrow-back">
+                <a href="#gallery"><div class="arrow"></div></a>
+            </div>
+            <!-- Gallery part -->
+            <div class="over" id="gallery">
+                <!-- Background with parallax effects -->
+                <div class="over-content">
+                    <a class="more more-gallery" href="gallery.html">view other image</a>
+                </div>
+                <div class="arrow-back no-background">
+                    <a href="#about-us"><div class="arrow"></div></a>
+                </div>
+            </div><!-- #gallery -->
+            <!-- About us part -->
+            <div class="container" id="about-us">
+                <h1>MOD-SPACE</h1>
+                <div class="container-content">
+                    MOD-SPACE stands for Matteo, Oliver and Daniele Space. MOD-SPACE was started on October 1, 1958, as a part of the Italian government. MOD-SPACE is in charge of Italian science and technology that has to do with airplanes or space.<br/>MOD-SPACE does a lot of different things. MOD-SPACE makes satellites. The satellites help scientists learn more about Earth. MOD-SPACE sends probes into space. MOD-SPACE scientists study things in the solar system and even farther away. A new program will send humans to explore the Moon and, one day, Mars. MOD-SPACE also shares what they learn with others. People who do not work at MOD-SPACE can use MOD-SPACE ideas to make new inventions. These new inventions can help make life on Earth better.            </div>
+                <br/>
+                <a class="link" href="about.html">know more</a>
+            </div><!-- #about-us  -->
+            <!-- Arrow -->
+            <div class="arrow-back">
+                <a href="#join-us"><div class="arrow"></div></a>
+            </div>
+            <!-- Join us part -->
+            <div class="over" id="join-us">
+                <div class="over-content">
+                    <h1 class="title">Be part of the mod-space's family</h1>
+                    <a class="more" href="join-us.html">join us</a>
+                </div>
+                <div class="arrow-back">
+                    <a href="#video"><div class="arrow"></div></a>
+                </div>
+            </div><!-- #join-us --> 
+            <div class="video-wrapper" id="video">
+                <embed src="https://www.youtube.com/embed/X9vOoXU56KI?rel=0&hd=1" frameborder="0" allowfullscreen></embed>
+            </div>  
+            <div id="content-wrap-bottom"></div>
+            <!-- Footer -->
+            <footer id="footer">
+                <!-- Left div -->
+                <div class="footer-left">
+                    <img src="img/logo.svg"></img>
+                    <span>MOD-Space</span>
+                </div>
+                <!-- Middle div -->
+                <div class="footer-middle">
+                    <a href="https://twitter.com"><img src="img/twitter.svg"></a><!-- link to "https://twitter.com" -->
+                    <a href="https://instagram.com"><img id="instagram" src="img/instagram.svg"></a><!-- link to "https://instagram.com" -->
+                    <a href="https://facebook.com"><img src="img/facebook.svg"></a><!-- link to "https://facebook.com" -->
+                </div>
+                <!-- Right div -->
+                <div class="footer-right">
+                    <div class="email_logo">
+                        <a id="email" href= "mailto:mod.space@gmail.com">mod.space@gmail.com</a><!-- Send an email to mod.space@gmail.com -->
+                        <img src="img/email.svg">
+                    </div>
+                    <div class="tel_logo">
+                        <a id="tel" href="tel:+3936535488971">365 354 88971</a><!-- Call the number phone +39 365 3548 8971 -->
+                        <img src="img/tel.svg">
+                    </div>                       
+                </div>   
+            </footer>
+        </div> <!-- #page-container -->
+    <!-- end of the body -->
+    </body>
+    <!-- External JS -->
+    <script src="js/main.js"></script>
+</html>

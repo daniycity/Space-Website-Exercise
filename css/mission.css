@@ -1,0 +1,155 @@
+/*
+* @author Daniele Pagano
+*/
+/*CSS for make the top of page with the image and buttons*/
+#mission{
+  background-image: url("../img/mission-background.jpg");
+  background-size: cover;
+  background-position: center;
+  font-size:5vw;
+  margin-top: 0px;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+#mission span{
+  line-height: 50vh; /*view height make sure "Missions" it's in the right place*/
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-shadow: 5px 5px 5px black;
+}
+#mission div{
+  display: inline-block;
+}
+#mission a{
+  padding: 3px;
+  font-size: 3vw; /*view width allow us to scale gradually the font*/
+  background-color: transparent;
+  box-sizing: border-box;
+  top: 50vh;
+  border: 5px solid;
+  border-radius: 10px;
+  font-family: 'Press Start 2P', cursive;
+  text-decoration: none;
+}
+#mission a:hover{
+  background-color: white;
+  color: #4BBEFD;
+}
+/*CSS for general styling*/
+body{
+  color:white;
+}
+a{
+  color:white;
+  text-decoration: none;
+}
+#content-wrap-bottom{
+  margin-top: 50px;
+}
+/*CSS for card*/
+.card img{
+    display: block;
+    max-width: 28vw;
+}
+.card {
+    display: inline-block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: black;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.623);
+    transition: 0.3s;
+}
+.card span{
+  display: block;
+  padding: 10px;
+}
+.card:hover {
+  box-shadow: 0px 0px 8px 10px rgba(0, 0, 0, 0.801);
+}
+.container {
+  padding: 2px 16px;
+}
+.card a:hover{
+  color:#0591F6
+}
+.card ul{
+  margin: 0px;
+}
+/*CSS for card background and buttons show past/present/future*/
+.past,.present,.future{
+  display:inline-block;
+  margin-bottom: 10px;
+}
+.past{
+  background-color: #0591F6;
+}
+.present{
+  background-color: #A8394A;
+}
+.future{
+  background-color: #F6772B;
+}
+#past,#present,#future {
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 2vw;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  margin-left: 50px;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  display: block;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+#present{
+  background-color: #A8394A;
+}
+#past{
+  background-color:#0591F6 ;
+}
+#future{
+  background-color: #F6772B;
+}
+#past span,#present span, #future span{ /*IT'S REALLY IMPORTANT OR ANIMATION DOESN'T WORK REALLY ANCHIENT BUG*/
+    display:inline-block;
+    transform: rotate(90deg);
+}
+.show{ /*Css used in the main.js*/
+    display: none;
+}
+/*Animation for arrow in the span in buttons*/
+@keyframes roll {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes deroll {
+  0% {
+    transform: rotate(0);    
+  }
+  100% {
+    transform: rotate(90deg);  
+  }
+}
+@media screen and (max-width:425px) {
+  .card img{
+    max-width:80vw;
+  }
+  #past,#present,#future{ /*In the small screen i want the button to be centered*/
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+}

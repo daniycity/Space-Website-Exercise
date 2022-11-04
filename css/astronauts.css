@@ -1,0 +1,140 @@
+/*CSS for make the top of page with the image and buttons*/
+#astronaut{
+    background-image: url("../img/astronaut-background.jpg");
+    background-size: cover;
+    background-position: center;
+    font-size:5vw;
+    margin-top: 0px;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+#astronaut span{
+    line-height: 50vh; /*view height make sure "astronauts" it's in the right place*/
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-shadow: 5px 5px 5px black;
+}
+#astronaut div{
+    display: inline-block;
+}
+#astronaut button {
+    font-size: 3vw; /*view width allow us to scale gradually the font*/
+    background-color: transparent;
+    box-sizing: border-box;
+    top: 50vh;
+    border: 5px solid;
+    border-radius: 10px;
+    font-family: 'Press Start 2P', cursive;
+    text-decoration: none;
+}
+#astronaut button:hover, #astronaut a:hover{
+    background-color: white;
+    color: #4BBEFD;
+}
+/*CSS for general styling*/
+body{
+    color:white;
+}
+a{
+    color:white;
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+p{
+    padding: 10px;
+    text-align: justify;
+}
+h1,h2,h3{
+    text-align: center;
+}
+h1,h3{
+    color: black;
+}
+/*CSS for biography styling*/
+#active-container {
+    max-width: 1920px; /*I don't want in display in 4k to be too much big*/
+    box-sizing: border-box;
+    background-color: rgb(179, 179, 179); 
+}
+.card img{
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin:auto;
+}
+.card {
+    display: inline-block;
+    transition: 0.3s;
+}
+.card:nth-of-type(even){ /*Make sure the card is on the right on the screen*/
+    float:right;
+}
+.card span{
+  display: block;
+  padding: 10px;
+}
+.container {
+    max-width: 45vw;
+    height: 50vh; /*For make sure the card are align with float */
+    display: table; /*Not supported on IE less than 8*/
+}
+.card a{
+    display:block;
+}
+.card ul{
+    text-align: left;
+    margin: 0px;
+}
+.first-column{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    float:left;
+    display: table-column;
+    width: 35%;
+    background-color: black;
+    text-align: center;
+
+}
+.second-column{
+    float:right;
+    display: table-column;
+    width: 65%;
+
+}
+.card:nth-of-type(even) .first-column{
+    float: right;
+    /*text-align: right;*/
+}
+.card:nth-of-type(even) .second-column{
+    float: left;
+    /*text-align: right;*/
+}
+
+#retired-container {
+    display: block;
+    box-sizing: border-box;
+    max-width: 1920px;
+    background-color: rgb(100, 100, 100); /*Grigio scuro 100 100 100*/
+}
+.card a:hover{
+    color:#0591F6
+}
+/*Mediaqueries*/
+@media screen and (max-width:900px) {
+    .container{
+      max-width:90vw;
+    }
+    .card:last-of-type{
+        float: none !important;
+    }
+    .card {
+        font-size: 3vw;
+    }
+    .card:last-of-type ul{
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,609 @@
+/*
+ * @authors Daniele Pagano - Matteo Fasano - Oliver Terzo
+ * 
+ * homepage.css
+ *
+ * This is the CSS file for the page homepage.html
+ *
+ */
+
+
+nav.navigation{
+    z-index: 3; /* specifies the stack order of nav.navigation at 3 */
+}
+
+/* Change the color of the user's selection */
+::selection{
+    background-color: #FFB334;
+}
+
+body{
+    font-family: 'Khula';
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*
+ * Parallax class
+ * Create the parallax effects with background-attachment: fixed
+ *  
+ */
+.parallax {
+    background-image: url("../img/space.jpg");
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center; /* center the image in the div */
+    background-size: cover; /* resize the background image to cover the entire div */
+    background-repeat: no-repeat; 
+}
+
+/* First part */
+.over{
+    height: 100vh;
+    background-image: url("../img/moon-post.jpg");
+    background-attachment: fixed; /* parallax effects */
+    background-position: center; /* center the image in the div */
+    background-size: cover; /* resize the background image to cover the entire div */
+    background-repeat: no-repeat;
+    text-align: center;
+    position: relative;
+}
+
+.title{
+    color: white;
+    font-size: 72px;
+    background-color: rgb(0, 0, 0, 0.2);
+    padding: 5% 0 5% 0;
+}
+
+.main-title{
+    font-family: 'Press Start 2P';
+}
+
+.over-content{ /* translates the div .over-content into the vertical center of the container .over */
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.over-content a{
+    color: white;
+}
+
+/*
+ * .more
+ * Anchor element into div.over
+ */
+.more{
+    background-color: #D72E43;
+    border: 0.1em solid #D72E43;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 0.35em 1.2em;
+    border-radius: 0.12em;
+    transition-duration: 0.4s; /* transition to hover state */
+    animation: 2s infinite pulse-red; /* the animation lasts 2 seconds and repeats infinitely */
+}
+
+/* Psuedo-class :hover on the anchor .more */
+.more:hover{
+    background-color: white;
+    cursor: pointer;
+    color: #D72E43;
+}
+
+/* Gallery part */
+#gallery{
+    background-image: url("../img/astronaut-bg.jpg");
+}
+
+/*
+ * .more-gallery
+ * Anchor element into div.over for the gallery part
+*/
+.more-gallery{
+    background-color: #0591f6;
+    border-color: #0591f6;
+    box-shadow: 0 0 0 0 rgb(5, 145, 246, 1);
+    animation: 2s infinite pulse-blue;
+}
+
+.more-gallery:hover{
+    color: #0591f6;
+}
+
+/* Arrow */
+.arrow {
+    height: 10vw;
+    width: 10vw;
+    border-style: solid;
+    border-color: #D72E43;
+    border-width: 0px 2px 2px 0px; /* border only bottom and right*/
+    transform: rotate(45deg); /* rotate the div to create an arrow */
+    margin: auto;  
+}
+
+/* Psuedo-class :hover on the arrow */
+.arrow:hover {
+    border-width: 0px 4px 4px 0px; /* increase the width of the border */
+    cursor: pointer;
+}  
+
+/* Selects all the .arrow into an .arrow-back with even index */
+.arrow-back:nth-of-type(even) .arrow{
+    border-color: #0591f6;
+}
+
+.arrow-back{
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 10%;
+}
+
+.no-background{
+    background-color: rgb(255, 255, 255, 0.1);
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 5%;
+}
+
+/* Section */
+.section{
+    margin: 0;
+    padding-top: 5%;
+    background-color: white;
+    /* align all the element vertically and horizontally in the middle of the container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.section div{
+    display: inline-block;
+}
+
+.section div p{
+    text-align: justify;
+}
+
+.section a, .link{ 
+    color: black;
+    padding: 0px 10px 0px 10px;
+	transform: scale(1);
+	animation: 2.5s infinite;
+}
+
+#introduction .text{
+    width: 35%;
+    padding-right: 30%;
+    font-size: xx-large;
+}
+
+#introduction{
+    padding-bottom: 2%;
+}
+
+.text{
+    width: 40%;
+    font-size: x-large;
+    line-height: 2;
+}
+
+/* Selects .small into a into a .section with even index */
+.section:nth-of-type(even) .small{
+    background-color: rgba(215, 46, 67, 0.3);
+    box-shadow: 0 0 0 0 rgba(215, 46, 67, 1);
+    animation-name: pulse-red;
+    float: right;
+}
+
+/* Selects .small into a .section with odd index */
+.section:nth-of-type(odd) .small{
+    background-color: rgba(5, 145, 246, 0.3);
+    box-shadow: 0 0 0 0 rgba(5, 145, 246, 1);
+    animation-name: pulse-blue;
+}
+
+/* Selects .span-colored elements with odd index */
+.span-colored:nth-child(odd){
+    background-color: rgba(5, 145, 246, 0.3);
+}
+
+/* Selects .span-colored elements with even index */
+.span-colored:nth-child(even), #astronauts .span-colored{
+    background-color: rgb(215, 46, 67, 0.3);
+}
+
+.section-image{
+    width: 40%;
+}
+
+.section-image img{
+    width: 70%;
+    float: right;
+}
+
+/* Selects every image into a .section.image that is the first child of its parent */
+.section-image:first-child img{
+    float: left;
+}
+
+.small{
+    font-size: x-large;
+    float: left;
+}
+
+.text p a{
+    color: black;
+    padding: 0px 5px 0px 5px;
+}
+
+.colored{
+    background-color: whitesmoke;
+}
+
+.image{
+    position: absolute;
+    top: 120vh;
+    left: 55%;
+    z-index: 2; /* specifies the stack order of .image at 2 */
+}
+
+/* New posts div */
+#new-posts{
+    height: 100vh;
+}
+
+#new-posts img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post{ 
+    width: 50%; 
+    height: 50%; 
+    float: left; 
+    position: relative;
+    z-index: 1; /* specifies the stack order of .post at 1 */
+}
+
+.post-content{
+    text-transform: uppercase;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    bottom:0;
+    background-color: rgb(0, 0, 0, 0.3);
+    height: 30%;
+    width: 100%;
+}
+
+.post:hover{
+    cursor: pointer;
+}
+
+.post-content span{
+    position: relative;
+    top: 50%;
+    margin: 0 0 0 5%;
+}
+
+.post:hover .post-content{
+    background-color: rgba(5, 145, 246, 0.3);
+}
+
+/* Video embedded by YouTube */
+.video-wrapper {
+    width: 100%;
+    padding: 10% 0 10% 0;
+    background-image: url("../img/astronaut-2-bg.jpg");
+    background-attachment: fixed; /* parallax effects */
+    background-position: center;/* center the image in the div */
+    background-size: cover; /* resize the background image to cover the entire div */
+    background-repeat: no-repeat;
+    /* align all the element vertically and horizontally in the middle of the container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.video-wrapper embed { /* video size */
+    width: 1024px;
+    height: 576px;
+}
+
+/* Container div */
+.container{
+    text-align: center;
+    margin: 0;
+    padding: 0% 30% 0% 30%;
+    font-size: x-large;
+}
+
+.container-content{
+    text-align: justify;
+}
+
+.container-content img{
+    width: 40%;
+    float: right;
+    margin-left: 20px;
+}
+
+.container-content img:nth-of-type(even){
+    width: 40%;
+    float: left;
+    margin: 0 20px 0 0;
+}
+
+#about-us.container{
+    padding-top: 5%;
+    margin-bottom: 3%;
+}
+
+.link{
+    background-color: rgba(5, 145, 246, 0.3);
+    box-shadow: 0 0 0 0 rgba(5, 145, 246, 1);
+    animation-name: pulse-blue;
+    text-transform: uppercase;
+}
+
+/* Join us part */
+#join-us{
+    background-image: url("../img/astronaut-2-bg.jpg");
+}
+
+#join-us h1{
+    background-color: rgb(0, 0, 0, 0.5);
+    text-transform: uppercase;
+}
+
+#join-us .arrow-back{
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 5%;
+}
+
+#join-us .arrow-back .arrow{
+    border-color: #D72E43;
+    height: 7vw;
+    width: 7vw;
+}
+
+/*
+ * Keyframes
+ * Creates a pulsation through the box-shadow
+ * scale(0.95) decreases the size
+ * scale(1) increase the size, the object return to the original size
+ * 
+ */
+
+@keyframes pulse-red { /* box-shadow red */
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(215, 46, 67, 0.7);
+	}
+
+	70% {
+		transform: scale(1); 
+		box-shadow: 0 0 0 10px rgba(215, 46, 67, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(215, 46, 67, 0);
+	}
+}
+
+@keyframes pulse-blue { /* box-shadow light blue */
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(5, 145, 246, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(5, 145, 246, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(5, 145, 246, 0);
+	}
+}
+
+/*
+ * Media queries
+ * Change the style according to the page size
+ * 
+ */
+
+/* Less than equal to 1200px */
+@media screen and (max-width: 1200px) {
+
+    .container{
+        padding: 0% 20% 0% 20%;
+    }
+
+}
+
+/* Less than equal to 1100px */
+@media screen and (max-width: 1100px) {
+
+    .video-wrapper embed { /* decreases the size of the embedded YouTube video */
+        width: 668px;
+        height: 376px;
+    }
+
+}
+
+/* Less than equal to 1055px */
+@media screen and (max-width: 1055px) {
+
+    .image{
+        top: 100vh;
+        left: 50%;
+    }
+
+    .image img{
+        width: 90%;
+    }
+
+    #introduction .text, .text{
+        font-size: large;
+        line-height: 2;
+    }
+
+}
+
+/* Less than equal to 960px */
+@media screen and (max-width: 960px) {
+
+    .image{
+        top: 105vh;
+        left: 50%;
+    }
+
+    .image img{
+        width: 85%;
+    }
+
+    #introduction .text{
+        font-size: x-large;
+        line-height: 2;
+        width: auto;
+        padding: 0 50% 0 10%;
+    }
+
+}
+
+/* Less than equal to 768px */
+@media screen and (max-width: 768px) {
+
+    .image{ /* hide the astronaut's image */
+        display: none;
+    }
+
+    #introduction .text, .section:nth-of-type(n) .text{
+        height: fit-content;
+        padding: 0 10% 0 10%;
+        float: none;
+        width: auto;
+    }
+
+    .container{
+        padding: 0% 10% 0% 10%;
+    }
+
+    .section{
+        display: block;
+    }
+
+    .section-image img{
+        display: none;
+    }
+
+    .section:nth-of-type(n) .small{
+        float: none;
+        margin: auto;
+        position: relative;
+    }
+
+    .over h1{
+        font-size: 52px;
+    }
+
+    .video-wrapper embed { /* decreases the size of the embedded YouTube video */
+        width: 493px;
+        height: 276px;
+    }
+
+    #join-us .arrow-back .arrow{
+        height: 10vw;
+        width: 10vw;
+    }
+
+}
+
+/* Less than equal to 600px */
+@media screen and (max-width: 600px){
+    .arrow, #join-us .arrow-back .arrow{
+        height: 20vw;
+        width: 20vw;
+    }
+
+    #introduction{
+        padding-top: 15%;
+    }    
+
+    .over h1{
+        font-size: 42px;
+    }
+
+}
+
+/* Less than equal to 500px */
+@media screen and (max-width: 500px){
+
+    .video-wrapper embed { /* decreases the size of the embedded YouTube video */
+        width: 355px;
+        height: 200px;
+    }  
+
+    .over h1{
+        font-size: 32px;
+    }
+
+}
+
+/* Less than equal to 412px */
+@media screen and (max-width: 412px){
+
+    .video-wrapper embed { /* decreases the size of the embedded YouTube video */
+        width: 272px;
+        height: 150px;
+    }  
+
+    .post-content{
+        font-size: medium;
+    }
+
+}
+
+/* Less than equal to 320px */
+@media screen and (max-width: 320px) {
+
+    #introduction .text, .section:nth-of-type(n) .text, .container{
+        padding: 5% 10% 0 10%;
+        font-size: medium;
+    }
+
+    .container{
+        padding: 0 10% 0 10%;
+        font-size: medium;
+    }
+    
+    .over h1{
+        font-size: 22px;
+    }
+
+    .small, .container a{
+        font-size: medium;
+    }
+
+    .post-content{
+        font-size: small;
+    }
+
+}

@@ -1,0 +1,148 @@
+<!doctype html>
+    <html lang="eng">
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+            <title>Join us</title>
+            <meta name="description" content="Application form for future astronaut">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="Author" content="Daniele Pagano">
+            <meta name="Author" content="Oliver Terzo">
+            <meta name="Author" content="Matteo Fasano">
+            <!-- Flaticon -->
+            <link rel="shortcut icon" href="img/logo.svg" />
+            <!-- External CSS -->
+            <link rel="stylesheet" href="css/normalized.css">
+            <link rel="stylesheet" href="css/main.css">
+            <!--css join-us -->
+            <link rel="stylesheet" href="./css/join-us.css">
+            <!-- Fonts-->
+            <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"> 
+            <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap" rel="stylesheet">
+            <!-- JQUERY -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        </head>
+        <body>
+            <div id="page-container">
+                <!--[if lt IE 8]>
+                <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+                <![endif]-->
+                
+                <!-- Navigation menu -->
+                <nav class="navigation">
+                    <!-- Logo -->
+                    <div class="nav-logo">
+                        <a href="homepage.html"><img src="img/logo.svg"></a>
+                        <a href="homepage.html">MOD-Space</a><!-- link to the homepage.html page -->
+                    </div>
+                    <!-- Links -->
+                    <ul class="nav-menu">
+                        <li><a href="about.html">About-us</a></li><!-- link to about.html page -->
+                        <li><a href="gallery.html">Gallery</a></li><!-- link to galley.html page -->
+                        <li><a href="join-us.html">Join-us</a></li><!-- link to join-us.html page -->
+                        <li><a href="astronauts.html">Astronauts</a></li><!-- link to astronauts.html page -->
+                        <li><a href="missions.html">Mission</a></li><!-- link to missions.html page -->
+                    </ul>
+                    <!-- Icon -->
+                    <div class="nav-toggle">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </div>
+                    <div class="nav-overlay"></div>
+                </nav>
+                <div id="content-wrap-top"></div>
+                <!-- Go all the code for elements that are not yet initialized-->
+
+
+                <div class="main_container">
+                    <div class="join_us">
+                        <span>WORK WITH US</span>
+                        <button type="button" id="btn_join">JOIN OUR TEAM</button>
+                    </div>
+                </div>
+                <div id="modalID" class="modal">
+                   <div class="modal_content">
+                       
+                       <div class="modal_header">
+                           <h5 class="modal_title">Application Form for Future Astronauts</h5>
+                           <span class="close_btn">&times;</span>
+                       </div>
+                       <form method="post" action="list-application.php">
+                        <label for="first_name">First Name</label>
+                        <input type="text" placeholder="First-Name" id="first_name" name="first_name" pattern="[A-Za-z]+" title="Only letter"><br>
+                        <label for="middle_name">Middle name</label> 
+                        <input type="text" placeholder="Middle-Name(Optional)" id="middle_name" name="middle_name" pattern="[A-Za-z]+" title="Only letter"><br>
+                        <label for="last_name">Last Name</label> 
+                        <input type="text" placeholder="Last-Name" id="last_name" name="last_name" pattern="[A-Za-z]+" title="Only letter"><br>
+                        <label for="mission">List of desideraded Mission</label>
+                        <input list="list_mission" placeholder="List-Mission" id="mission" name="mission"> <br>
+                        <label for="age">Age</label>
+                        <input type="number" min="18" max="99" placeholder="Age" id="age" name="age">
+                        <label for="gender">Gender</label> 
+                        <input list="list_gender" placeholder="Gender" id="gender" name="gender" pattern="[mMFf]{1}" title="Only M or F"><br>
+                        <label for="col_hair">Color Hair</label> 
+                        <input type="color" placeholder="Color Hair" id="col_hair" name="col_hair">
+                        <label for="col_eye">Color Eye</label> 
+                        <input type="color" placeholder="Color Eye" id="col_eye" name="col_eye">
+                        <label for="weight">Weight</label> 
+                        <input type="number" min="20" max="100" placeholder="Weight" id="weight" name="weight"> <br>
+                        <label for="email">E-Mail</label>
+                        <input type="email" placeholder="E-Mail" id="email" name="email"><br>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" placeholder="Phone Number (347-5123313)" pattern="[0-9]{3}-[0-9]{7}" title="The format is 347-5155813"id="phone" name="phone"><br>
+                        <label for="address">Andress</label> 
+                        <input type="text" placeholder="Andress" id="address" name="address"><br>
+                        <label for="bio">A short Biography</label>
+                       <textarea name="short_bio" rows="3" cols="50" minlength="1" maxlength="255" placeholder="Max 255 characters" id="bio"></textarea><br>
+                       <div class="modal_footer">
+                           <button type="submit" class="btn_send">Send</button>
+                       </div>      
+                       </form>
+                   </div> 
+                </div>
+        
+                <datalist id="list_mission">
+                    <option value="Mars Sample Return"></option>
+                    <option value="ExoMars 2022 Rover (ESA/Roscosmos)"></option>
+                    <option value="MarsObserver"></option>
+                    <option value="Viking 1 & 2"></option>
+                    <option value="Mars PathFinder"></option> 
+                    <option value="E.T"></option>     
+                </datalist>
+                <datalist id="list_gender">
+                    <option value="M">
+                    <option value="F">
+                </datalist>
+
+
+
+
+                <div id="content-wrap-bottom"></div>
+                <footer id="footer">
+                    <div class="footer-left">
+                        <img src="img/logo.svg"></img>
+                        <span>MOD-Space</span>
+                    </div>
+                    <div class="footer-middle">
+                        <a href="https://twitter.com"><img src="img/twitter.svg"></a>
+                        <a href="https://instagram.com"><img id="instagram" src="img/instagram.svg"></a>
+                        <a href="https://facebook.com"><img src="img/facebook.svg"></a>
+                    </div>
+                    <div class="footer-right">
+                        <div class="email_logo">
+                            <a id="email" href= "mailto:mod.space@gmail.com">mod.space@gmail.com</a>
+                            <img src="img/email.svg">
+                        </div>
+                        <div class="tel_logo">
+                            <a id="tel" href="tel:+3936535488971">365 354 88971</a>
+                            <img src="img/tel.svg">
+                        </div>                       
+                    </div>   
+                </footer>
+                <script src="js/main.js"></script>
+                <script src="js/join-us.js"></script>
+            </div>
+        </body>
+    </html>

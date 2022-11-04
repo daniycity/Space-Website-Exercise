@@ -1,0 +1,377 @@
+/*
+ * @authors Daniele Pagano - Matteo Fasano - Oliver Terzo
+ * 
+ * about.css
+ *
+ * This is the CSS file for the page about.html
+ *
+ */
+
+/* Change the color of the user's selection */
+::selection{
+    background-color: #FFB334;
+}
+
+body{
+    font-family: 'Khula';
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*
+ * Parallax class
+ * Create the parallax effects with background-attachment: fixed
+ *  
+ */
+.parallax{
+    height: 50vh;
+    background-image: url("../img/space-selfie.jpg");
+    background-attachment: fixed;
+    background-position: center; /* center the image in the div */
+    background-size: cover; /* resize the background image to cover the entire div */
+    background-repeat: no-repeat; 
+}
+
+/**
+ * First part
+ * Inizial div of the page
+ *  
+ */
+.over{
+    height: 100vh;
+    background-image: url("../img/astronaut-4k.jpg");
+    background-attachment: fixed; /* parallax effects */
+    background-position: center; /* center the image in the div */
+    background-size: cover; /* resize the background image to cover the entire div */
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.title{
+    color: white;
+    font-size: 72px;
+    background-color: rgb(0, 0, 0, 0.2);
+    padding: 5% 0 5% 0;
+}
+
+.over-content{ /* translates the div .over-content into the vertical center of the container .over */
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.over-content a{
+    color: white;
+}
+
+/*
+ * .more
+ * Anchor element into div.over
+ * 
+ */
+.more{
+    background-color: #D72E43;
+    border: 0.1em solid #D72E43;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 0.35em 1.2em;
+    border-radius: 0.12em;
+    transition-duration: 0.4s; /* transition to hover state */
+    animation: 2s infinite pulse-red; /* the animation lasts 2 seconds and repeats infinitely */
+}
+
+/* Psuedo-class :hover on the anchor .more */
+.more:hover{
+    background-color: white;
+    cursor: pointer;
+    color: #D72E43;
+}
+
+/* Section */
+.section{
+    background-color: white;
+    padding: 10% 0 10% 0;
+    /* align all the element vertically and horizontally in the middle of the container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.section div p{
+    text-align: justify;
+}
+
+.text{
+    width: 40%;
+    font-size: large;
+    line-height: 2;
+}
+
+.text h1{
+    text-transform: uppercase;
+}
+
+/* Selects h1 into a .text into a .section with odd index */
+.section:nth-of-type(odd) .text h1{
+    color: #D72E43;
+}
+
+/* Selects h1 into a .text into a .section with even index */
+.section:nth-of-type(even) .text h1{
+    color: #0591f6;
+}
+
+/* Selects all the .section with odd index */
+.section:nth-of-type(odd){
+    background-color: whitesmoke;
+}
+
+.section-image{
+    width: 40%;
+    float: right;
+}
+
+.section-image img{
+    width: 80%;
+    float: right;
+}
+
+/* Selects every image into a .section.image that is the first child of its parent */
+.section-image:first-child img{
+    float: left;
+}
+
+.main{
+    font-size: x-large;
+    line-height: 2;
+}
+
+/* What-has section */
+#what-has .text p{
+    margin-bottom: 10%;
+}
+
+.btn{
+    background-color: rgba(5, 145, 246, 0.3);
+    box-shadow: 0 0 0 0 rgba(5, 145, 246, 1);
+    color: black;
+    font-size: 20px;
+    padding: 0px 10px 0px 10px;
+	animation: 2.5s infinite pulse-blue; /* the animation lasts 2 seconds and repeats infinitely */
+}
+
+/* Psuedo-class :hover on the anchor .btn */
+.btn:hover{
+    cursor: pointer;
+}
+
+/* Arrow */
+.arrow {
+    height: 10vw;
+    width: 10vw;
+    border-style: solid;
+    border-color: #D72E43;
+    border-width: 0px 2px 2px 0px; /* border only bottom and right*/
+    transform: rotate(45deg); /* rotate the div to create an arrow */
+    margin: auto;  
+}
+
+/* Psuedo-class :hover on the arrow */
+.arrow:hover {
+    border-width: 0px 4px 4px 0px; /* increase the width of the border */
+    cursor: pointer;
+} 
+
+/* Selects .arrow into a .section with even index */
+.section:nth-of-type(even) .arrow{
+    border-color: #0591f6;
+}
+
+/* Video embedded by YouTube */
+.video-wrapper {
+    width: 100%;
+    padding: 10% 0 10% 0;
+    background-image: url("../img/astronaut-beer.jpg");
+    background-attachment: fixed; /* parallax effects */
+    background-position: center;/* center the image in the div */
+    background-size: cover; /* resize the background image to cover the entire div */
+    background-repeat: no-repeat;
+    /* align all the element vertically and horizontally in the middle of the container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-wrapper embed { /* video size */
+    width: 1024px;
+    height: 576px;
+}
+
+/*
+ * Keyframes
+ * Creates a pulsation through the box-shadow
+ * scale(0.95) decreases the size
+ * scale(1) increase the size, the object return to the original size
+ * 
+ */
+
+@keyframes pulse-red { /* box-shadow red */
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(215, 46, 67, 0.7);
+	}
+
+	70% {
+		transform: scale(1); 
+		box-shadow: 0 0 0 10px rgba(215, 46, 67, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(215, 46, 67, 0);
+	}
+}
+
+@keyframes pulse-blue { /* box-shadow light blue */
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(5, 145, 246, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(5, 145, 246, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(5, 145, 246, 0);
+	}
+}
+
+/*
+ * Media queries
+ * Change the style according to the page size
+ * 
+ */
+
+/* Less than equal to 1100px */
+@media screen and (max-width: 1100px) { 
+
+    .video-wrapper embed { /* decreases the size of the embedded YouTube video */
+        width: 668px;
+        height: 376px;
+    }
+
+    .text{
+        font-size: large;
+        line-height: 2;
+    }
+
+}
+/* Less than equal to 960px */
+@media screen and (max-width: 960px) {
+
+    .section#what-does, .section#what-has{
+        display: block;
+    }
+
+    #what-does .text, #what-has .text{ /* takes up the entire width of the page */
+        padding: 0 10% 0 10%;
+        float: none;
+        width: auto; 
+    }
+
+    #what-does .section-image img, #what-has .section-image img{ /* hide the image in the secion-image */
+        display: none;
+    }
+
+}
+
+/* Less than equal to 768px */
+@media screen and (max-width: 768px) {
+
+    .section{
+        display: block;
+    }
+
+    .text{ /* takes up the entire width of the page */
+        padding: 0 10% 0 10%;
+        float: none;
+        width: auto; 
+        font-size: medium;
+    }
+
+    .section-image img{ /* hide the image in the secion-image */
+        display: none;
+    }
+
+    .video-wrapper embed { /* decreases the size of the embedded YouTube video */
+        width: 493px;
+        height: 276px;
+    }
+
+    .title{
+        font-size: 62px;
+    }
+
+}
+
+/* Less than equal to 600px */
+@media screen and (max-width: 600px){
+    
+    .arrow{
+        height: 20vw;
+        width: 20vw;
+    }
+
+    .title{
+        font-size: 42px;
+    }
+
+}
+
+/* Less than equal to 500px */
+@media screen and (max-width: 500px){
+
+    .video-wrapper embed { /* decreases the size of the embedded YouTube video */
+        width: 355px;
+        height: 200px;
+    }  
+
+    .title{
+        font-size: 52px;
+    }
+
+}
+
+/* Less than equal to 412px */
+@media screen and (max-width: 412px){
+
+    .video-wrapper embed { /* decreases the size of the embedded YouTube video */
+        width: 272px;
+        height: 150px;
+    }  
+
+}
+
+/* Less than equal to 320px */
+@media screen and (max-width: 320px) {
+
+    .section .text, .section .text h1{
+        font-size: small;
+    }
+   
+    .title{
+        font-size: 42px;
+    }
+
+}
